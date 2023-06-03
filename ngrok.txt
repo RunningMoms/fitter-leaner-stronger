@@ -1,3 +1,0 @@
-ngrok http --region=us --hostname=laptop.xxx 80
-
-/Applications/Utilities/ngrok http 8000 -host-header=registry.html-tags.test -subdomain=tarek
