@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    font-family: "AvenirNext","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#page {
+    grid-area: page;
+
+    display: grid;
+    grid-template:
+                max-content
+                max-content
+                max-content
+                max-content
+                max-content
+                    / 1fr;
+    grid-template-areas:
+        "banner"
+        "testimonials"
+        "pricing-options"
+        "legal";
+
+    grid-row-gap: 20px;
+}
+
+#banner{
+    grid-area: banner;
+
+    display:grid;
+    grid-template:
+                max-content
+                max-content
+                            / min-content   1fr;
+
+    grid-template-areas:
+        "logo FLS"
+        "pitch pitch";
+}
+
+#banner h1{
+    grid-area: pitch;
+}
+
+#testimonials {
+    grid-area: testimonials;
+}
+
+.testimonial {
+    display: grid;
+
+    grid-template:
+    70px
+    max-content
+    max-content
+    /   0.95fr;
+
+    grid-template-areas:
+    "image"
+    "text"
+    "name";
+}
+
+.testimonial img {
+    grid-area: image;
+    margin-left: calc(0% - 20px);
+    argin-top: 20px;
+}
+
+.testimonial .quote{
+    height: 200px;
+}
+
+
+.horizontal-scroll {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    grid-gap: 1em;
+}
+
+#pricing-options {
+    grid-area: pricing-options;
+
+    display: grid;
+    grid-auto-columns: max-content;
+    grid-gap: 2em;
+
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.pricing-option {
+    max-width: 450px;
+    min-width: 250px;
+    display: grid;
+
+    grid-auto-flow: row;
+    grid-template-rows:
+            max-content
+            1fr
+            max-content;
+}
+
+.pricing-option > *:nth-last-child(2) {
+    padding-bottom: 1em;
+}
+
+#pricing-options ul > li:last-of-type {
+    margin-bottom: 0px;
+}
+
+#legal {
+    grid-area: legal;
+}
+

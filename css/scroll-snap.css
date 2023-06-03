@@ -1,0 +1,27 @@
+html {
+    scroll-behavior: smooth !important;
+}
+
+.testimonial .quote {
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#page {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+/* https://mediag.com/blog/popular-screen-resolutions-designing-for-all */
+/*
+@media (min-width: 360px) and (min-height: 740px) {
+    #testimonials, .pricing-option {
+        scroll-snap-align: start end !important;
+    }
+
+    #testimonials, .pricing-option {
+        scroll-margin-top: 10px;
+    }
+}
+*/

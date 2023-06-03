@@ -1,0 +1,220 @@
+
+
+body{
+    font-family:  'Avenir Next', sans-serif;
+}
+
+:root {
+    --radius: 15px;
+}
+
+.no-scroll-bar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.no-scroll-bar::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-image: url("../media/bg.png");
+    background-color: #ffffff;
+
+    padding-bottom: env(safe-area-inset-bottom);
+
+
+}
+
+#page {
+    background-color: #ffffff;
+    height: 100vh;
+}
+
+#page > *{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    width: 100%;
+}
+#page > *:nth-child(odd) {
+    background-color: #000000;
+    color: white;
+}
+#page > *:nth-child(even) {
+    background-color: #ffffff;
+}
+
+#testimonials {
+    width: calc(100% - 175px);
+    padding-left: 100px;
+    padding-right: 75px;
+}
+
+#testimonials img {
+
+    border-radius: 50%;
+    max-width: 100px;
+    max-height: 100px;
+
+    z-index: 1000;
+}
+
+.testimonial > div {
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #dedede;
+
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+}
+
+.testimonial > div:first-of-type {
+    font-size: larger;
+}
+
+.testimonial > div:first-of-type,
+.testimonial > div:last-of-type {
+    border-radius: 0;
+}
+
+.testimonial > div:first-of-type {
+    padding-top: 60px;
+    border-top: 1px solid #dedede;
+
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+}
+
+.testimonial > div:last-of-type {
+    border-bottom: 1px solid #dedede;
+    border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+
+    padding: 0.5em;
+    font-size: 1.2em;
+    text-align: right;
+}
+
+.testimonial .quote {
+
+}
+
+.testimonial .customer {
+    text-transform: uppercase;
+    background-image: url("../media/bg.png");
+    font-weight: bold;
+    color: #777777;
+}
+
+.testimonial .customer sub {
+    display: block;
+    font-size: .7em;
+}
+
+.horizontal-scroll {
+    overflow-x: scroll;
+    /*scroll-snap-type: x proximity;*/
+    scroll-snap-type: x mandatory;
+}
+
+.horizontal-scroll > * {
+    scroll-snap-align: center;
+}
+
+.pricing-option {
+    border: 1px solid #cccccc;
+    border-radius: var(--radius);
+}
+
+.pricing-option ul {
+    font-size: larger;
+}
+
+.pricing-option h1 {
+    font-family: "Racing Sans One";
+    color: #777777;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.pricing-option h2 {
+    margin-top: 20px;
+    text-align: center;
+    color: #DAA520FF;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.pricing-option p {
+    font-weight: bold;
+    color: #777777;
+}
+
+.pricing-option .buttons{
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.pricing-option button {
+    cursor: pointer;
+    height: 60px;
+    background-color: #FF69B4FF;
+    border-top: 1px solid #dfdfdf;
+    border-right: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+
+    text-align: center;
+}
+.pricing-option button:first-child{
+    border-bottom-left-radius: var(--radius);
+}
+.pricing-option button:last-child{
+    border-bottom-right-radius: var(--radius);
+}
+
+button > span{
+    font-size: 1.4em;
+    display: block;
+}
+
+button > span:first-of-type {
+    font-family: "Racing Sans One";
+    color: #dedede;
+    font-size: 1.4em;
+}
+
+button > span:nth-of-type(2) {
+    color: #ffffff;
+    font-size: 1.6em;
+}
+
+#legal {
+    font-size: 0.8em;
+    color: #666666;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+ul > li {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-bottom: 17px;
+}
+ul > li > span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #FF69B4FF;
+    color: mediumseagreen;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 15px;
+    position: relative;
+    top: -5px;
+    line-height: 35px;
+}
