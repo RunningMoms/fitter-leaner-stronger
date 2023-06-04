@@ -252,7 +252,7 @@ ul.default li:last-child {
     margin-bottom: 0px;
 }
 
-#components {
+#components, #selfies {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -286,10 +286,19 @@ ul.default li:last-child {
 
 #components h3 {
     grid-area: title;
+    border-bottom: 1px solid #dedede;
     text-align: center;
 }
 
 #components p {
     grid-area: description;
-    text-align: justify;
+}
+
+#selfies {
+    margin: auto;
+    max-width: 1000px;
+}
+
+#selfies img{
+    margin: auto;
 }
