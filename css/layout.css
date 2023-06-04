@@ -84,6 +84,8 @@ body {
 }
 
 #pricing-options {
+    padding-top: 2em;
+    padding-bottom: 2em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, max-content));
     justify-content: center;
