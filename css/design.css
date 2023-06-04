@@ -68,10 +68,6 @@ body {
     padding-right: 0.7em;
 }
 
-.testimonial > div:first-of-type {
-    font-size: larger;
-}
-
 .testimonial > div:first-of-type,
 .testimonial > div:last-of-type {
     border-radius: 0;
