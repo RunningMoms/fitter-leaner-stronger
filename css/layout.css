@@ -12,15 +12,32 @@ body {
     grid-template:
                 max-content
                 max-content
-                            / min-content   1fr;
+                            / 1fr;
 
     grid-template-areas:
-        "logo FLS"
-        "pitch pitch";
+        "logo"
+        "pitch";
+}
+
+#banner > div:first-child{
+    padding-bottom: 0px;
+    text-align: center;
+}
+
+#banner img {
+    grid-area: logo;
+    position: relative;
+    left: -1em;
+    width: 10vw;
+    min-width: 50px;
+    max-width: 125px;
+    opacity: 0.75;
 }
 
 #banner h1{
     grid-area: pitch;
+
+    padding-top: 1em;
 }
 
 #banner ul {

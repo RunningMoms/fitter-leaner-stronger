@@ -1,7 +1,6 @@
 
-
-body{
-    font-family:  'Avenir Next', sans-serif;
+body {
+    font-family: 'Avenir Next', sans-serif;
 }
 
 :root {
@@ -31,7 +30,7 @@ body {
     height: 100vh;
 }
 
-#page > *{
+#page > * {
     width: 100%;
 }
 
@@ -39,6 +38,7 @@ body {
     background-color: #000000;
     color: white;
 }
+
 #page > *:nth-child(even) {
     background-color: #ffffff;
 }
@@ -150,7 +150,7 @@ body {
     color: #777777;
 }
 
-.pricing-option .buttons{
+.pricing-option .buttons {
     display: grid;
     grid-auto-flow: column;
 }
@@ -166,14 +166,16 @@ body {
 
     text-align: center;
 }
-.pricing-option button:first-child{
+
+.pricing-option button:first-child {
     border-bottom-left-radius: var(--radius);
 }
-.pricing-option button:last-child{
+
+.pricing-option button:last-child {
     border-bottom-right-radius: var(--radius);
 }
 
-button > span{
+button > span {
     font-size: 1.4em;
     display: block;
 }
@@ -198,6 +200,7 @@ button > span:nth-of-type(2) {
 .pricing-option ul {
     list-style-type: none;
 }
+
 .pricing-option ul > li {
     display: grid;
     grid-template-columns: max-content 1fr;
@@ -205,6 +208,7 @@ button > span:nth-of-type(2) {
     padding-right: 7px;
     margin-bottom: 17px;
 }
+
 .pricing-option ul > li > span {
     display: inline-block;
     width: 30px;
@@ -220,15 +224,17 @@ button > span:nth-of-type(2) {
     line-height: 35px;
 }
 
-.image-area{
+.image-area {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     overflow: hidden;
 }
+
 .horizontal-flip {
     transform: scaleX(-1);
 }
+
 .vertical-flip {
     transform: scaleY(-1);
 }
@@ -237,10 +243,53 @@ ul.default {
     list-style-type: disc;
     padding-left: 1.7em;
 }
-ul.default li{
+
+ul.default li {
     margin-bottom: 0.65em;
 }
 
-ul.default li:last-child{
+ul.default li:last-child {
     margin-bottom: 0px;
+}
+
+#components {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+}
+
+
+#components > div {
+    display: grid;
+
+    grid-template:
+            min-content
+            min-content
+            min-content
+                        /   1fr;
+
+    grid-template-areas:
+            "icon"
+            "title"
+            "description";
+
+    align-content: center;
+}
+
+#components img {
+    grid-area: icon;
+    width: calc(max(min(6vw, 150px), 75px));;
+    min-width: 50px;
+    margin: 0 auto;
+}
+
+#components h3 {
+    grid-area: title;
+    text-align: center;
+}
+
+#components p {
+    grid-area: description;
+    text-align: justify;
 }
