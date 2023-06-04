@@ -32,14 +32,6 @@
     src: url("../fonts/AvenirNextLTPro-It.otf") format('opentype');
 }
 
-.responsive-text {
-    font-size: 4vw;
-
-    max-font-size: 24px;
-    min-font-size: 14px;
-    margin: 0;
-}
-
 h1.responsive-text,
 h2.responsive-text,
 h3.responsive-text,
@@ -52,4 +44,18 @@ span.responsive-text {
 }
 h1, h2, h3, h4, h5 {
     font-weight: 100;
+}
+
+.add-margin{
+    margin: 3em;
+}
+.add-margin-sm{
+    margin: 1em;
+}
+
+.add-padding{
+    padding: 3em;
+}
+.add-padding-sm{
+    padding: 1em;
 }

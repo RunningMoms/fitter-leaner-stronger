@@ -32,10 +32,9 @@ body {
 }
 
 #page > *{
-    padding-top: 2em;
-    padding-bottom: 2em;
     width: 100%;
 }
+
 #page > *:nth-child(odd) {
     background-color: #000000;
     color: white;
@@ -48,6 +47,8 @@ body {
     width: calc(100% - 175px);
     padding-left: 100px;
     padding-right: 75px;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
 #testimonials img {
@@ -194,17 +195,17 @@ button > span:nth-of-type(2) {
     text-align: center;
 }
 
-ul {
+.pricing-option ul {
     list-style-type: none;
 }
-ul > li {
+.pricing-option ul > li {
     display: grid;
     grid-template-columns: max-content 1fr;
     padding-left: 7px;
     padding-right: 7px;
     margin-bottom: 17px;
 }
-ul > li > span {
+.pricing-option ul > li > span {
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -217,4 +218,29 @@ ul > li > span {
     position: relative;
     top: -5px;
     line-height: 35px;
+}
+
+.image-area{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+.horizontal-flip {
+    transform: scaleX(-1);
+}
+.vertical-flip {
+    transform: scaleY(-1);
+}
+
+ul.default {
+    list-style-type: disc;
+    padding-left: 1.7em;
+}
+ul.default li{
+    margin-bottom: 0.65em;
+}
+
+ul.default li:last-child{
+    margin-bottom: 0px;
 }

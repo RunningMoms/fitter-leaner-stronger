@@ -4,33 +4,10 @@
 }
 
 body {
-    display: grid;
     font-family: "AvenirNext","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-#page {
-    grid-area: page;
-
-    display: grid;
-    grid-template:
-                max-content
-                max-content
-                max-content
-                max-content
-                max-content
-                    / 1fr;
-    grid-template-areas:
-        "banner"
-        "testimonials"
-        "pricing-options"
-        "legal";
-
-    grid-row-gap: 20px;
-}
-
 #banner{
-    grid-area: banner;
-
     display:grid;
     grid-template:
                 max-content
@@ -46,8 +23,14 @@ body {
     grid-area: pitch;
 }
 
-#testimonials {
-    grid-area: testimonials;
+#banner ul {
+
+}
+
+#banner li {
+    display: block;
+    float: right;
+    padding-right: 3em;
 }
 
 .testimonial {
