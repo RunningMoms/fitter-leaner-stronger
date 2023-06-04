@@ -300,4 +300,5 @@ ul.default li:last-child {
 
 #selfies img{
     margin: auto;
+    max-width: 100vw;
 }

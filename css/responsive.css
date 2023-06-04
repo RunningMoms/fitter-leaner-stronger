@@ -23,6 +23,18 @@
 
 /* small */
 @media (max-width: 1199px) {
+    #pricing-options {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .pricing-option{
+        min-width: 320px;
+        width: 75vw;
+        max-width: 75vw;
+    }
+
     #components, #components2, #selfies {
         grid-template-columns: 1fr;
     }
@@ -44,26 +56,6 @@
     .standard-cols {
         grid-template-columns: 1fr; /* Single column layout */
         grid-template-rows: 1fr 1fr; /* Two equal-height rows */
-    }
-
-
-    #pricing-options {
-        grid-template-areas:
-        "a"
-        "b"
-        "c";
-    }
-
-    .pricing-option:nth-child(1) {
-        grid-area: c;
-    }
-
-    .pricing-option:nth-child(2) {
-        grid-area: b;
-    }
-
-    .pricing-option:nth-child(3) {
-        grid-area: a;
     }
 
     .horizontal-scroll > * {

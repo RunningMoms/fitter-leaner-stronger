@@ -6,11 +6,9 @@
 
     <title>RunningMoms</title>
 
-    <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/design.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/scroll-snap.css">
 
 </head>
 <body>
@@ -21,11 +19,6 @@
             <div class="add-padding">
                 <img src="media/icons/Logo.png"/>
             </div>
-            <!--<ul style="grid-area: FLS; position: relative; top: +75px;">
-                <li><h1 class="responsive-text">Stronger</h1></li>
-                <li><h1 class="responsive-text">Leaner</h1></li>
-                <li><h1 class="responsive-text">Fitter</h1></li>
-            </ul>-->
 
             <h1 class="responsive-text add-padding">
                 ARE YOU A WOMAN OVER 40 WHO WANTS TO GET FITTER LEANER & STRONGER?
@@ -36,10 +29,52 @@
              style="background-image: url(/media/curls.jpg); min-height: 40vh; background-position: center top;"></div>
     </div>
 
+    <div>
 
+        <div id="selfies">
+            <img src="media/selfies/_a.png" />
+            <img src="media/selfies/_b.png" />
+            <img src="media/selfies/_c.png" />
+            <img src="media/selfies/_d.png" />
+        </div>
 
+        <div id="testimonials" class="horizontal-scroll no-scroll-bar">
 
+            <div class="testimonial">
+                <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                     data-src-defer="testimonials/02/photo.webp">
 
+                <div class="quote responsive-text-sm">
+                    This has been AMAZING!! Life changing. seriously. Thank you Carey Adam! I woke up early, got the workout
+                    in, I loved this one, Sweat was dripping. I focused not on speed so much but form. I'm hydrated,
+                    nourished and journaled!! I will keep this up because I feel great, my mind feels
+                    clear, my body feels stronger!! it's been an awesome month!!
+                </div>
+
+                <div class="customer">
+                    Angie Adams
+                </div>
+
+            </div>
+
+            <div class="testimonial">
+                <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs="
+                     data-src-defer="testimonials/01/photo.webp">
+
+                <div class="quote responsive-text-sm">
+                    I'm so grateful for the results I'm seeing. In one month l start the training for my 3rd &amp; 4th half
+                    marathons this fall and I'm going in stronger with a renewed sense of determination and a deep
+                    appreciation for slowing down and strength training. Thanks Carey! This is SUCH a doable, sustainable,
+                    and productive program for this busy mom!
+                </div>
+
+                <div class="customer">
+                    Kelly Caprioti Burton
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <div id="pricing-options">
         <div class="pricing-option">
@@ -169,7 +204,9 @@
     </div>
 
 </div>
-
+<script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
 
 </body>
 </html>
