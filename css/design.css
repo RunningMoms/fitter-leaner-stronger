@@ -252,15 +252,15 @@ ul.default li:last-child {
     margin-bottom: 0px;
 }
 
-#components, #selfies {
+#components, #components2, #selfies {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-gap: 20px;
 }
 
-
-#components > div {
+#components > div,
+#components2 > div {
     display: grid;
 
     grid-template:
@@ -277,20 +277,23 @@ ul.default li:last-child {
     align-content: center;
 }
 
-#components img {
+#components img,
+#components2 img{
     grid-area: icon;
     width: calc(max(min(6vw, 150px), 75px));;
     min-width: 50px;
     margin: 0 auto;
 }
 
-#components h3 {
+#components h3,
+#components2 h3{
     grid-area: title;
     border-bottom: 1px solid #dedede;
     text-align: center;
 }
 
-#components p {
+#components p,
+#components2 p{
     grid-area: description;
 }
 

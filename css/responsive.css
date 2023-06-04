@@ -23,7 +23,7 @@
 
 /* small */
 @media (max-width: 1199px) {
-    #components, #selfies {
+    #components, #components2, #selfies {
         grid-template-columns: 1fr;
     }
 
