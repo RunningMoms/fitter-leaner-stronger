@@ -165,6 +165,7 @@ body {
 .pricing-option button:first-child{
     background-color: #FFD700;
     border-left: 2px solid #FFD700;
+    border-bottom: 2px solid #FFD700;
 }
 
 .pricing-option button:first-child {
