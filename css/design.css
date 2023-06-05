@@ -148,6 +148,7 @@ body {
 .pricing-option .buttons {
     display: grid;
     grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, 1fr);
 }
 
 .pricing-option button {
