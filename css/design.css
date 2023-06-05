@@ -118,7 +118,7 @@ body {
     background-color: #000000;
     color: white;
 
-    min-width: 380px;
+    min-width: min-content;
 }
 
 .pricing-option ul {
