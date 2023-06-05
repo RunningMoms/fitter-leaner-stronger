@@ -116,6 +116,26 @@ body {
     margin-bottom: 0px;
 }
 
+#carey-timelaps{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, max-content));
+    justify-content: center;
+    text-align: center;
+    gap: 2em;
+}
+#carey-timelaps img{
+    max-width: 100vw;
+}
+#carey-timelaps h2{
+    text-align: center;
+}
+
+#chatter{
+    display: block;
+    width: 1vw;
+    overflow: scroll;
+}
+
 #legal {
     grid-area: legal;
 }

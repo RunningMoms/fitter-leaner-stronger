@@ -23,10 +23,8 @@
 
 /* small */
 @media (max-width: 1199px) {
-    #pricing-options {
-        display: grid;
+    #pricing-options, #carey-timelaps {
         grid-template-columns: 1fr;
-        justify-content: center;
     }
 
     .pricing-option{
