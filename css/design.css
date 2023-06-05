@@ -114,8 +114,11 @@ body {
 }
 
 .pricing-option {
-    border: 1px solid #cccccc;
     border-radius: var(--radius);
+    background-color: #000000;
+    color: white;
+
+    min-width: 380px;
 }
 
 .pricing-option ul {
@@ -123,8 +126,8 @@ body {
 }
 
 .pricing-option h1 {
-    font-family: "Racing Sans One";
-    color: #777777;
+    /*font-family: "Racing Sans One";*/
+    /*color: #777777;*/
     padding: 0.5em;
     text-align: center;
 }
@@ -138,8 +141,8 @@ body {
 }
 
 .pricing-option p {
-    font-weight: bold;
-    color: #777777;
+
+
 }
 
 .pricing-option .buttons {
@@ -150,13 +153,18 @@ body {
 .pricing-option button {
     cursor: pointer;
     height: 60px;
-    background-color: #FF69B4FF;
-    border-top: 1px solid #dfdfdf;
-    border-right: 1px solid #ffffff;
-    border-bottom: 1px solid #ffffff;
-    border-left: 1px solid #ffffff;
+    background-color: #FFCC00;
+    border-top: 1px solid #FFCC00;
+    border-right: 2px solid #FFCC00;
+    border-bottom: 2px solid #FFCC00;
+    border-left: 2px solid #ffffff;
 
     text-align: center;
+}
+
+.pricing-option button:first-child{
+    background-color: #FFD700;
+    border-left: 2px solid #FFD700;
 }
 
 .pricing-option button:first-child {
@@ -167,28 +175,6 @@ body {
     border-bottom-right-radius: var(--radius);
 }
 
-button > span {
-    font-size: 1.4em;
-    display: block;
-}
-
-button > span:first-of-type {
-    font-family: "Racing Sans One";
-    color: #dedede;
-    font-size: 1.4em;
-}
-
-button > span:nth-of-type(2) {
-    color: #ffffff;
-    font-size: 1.6em;
-}
-
-#legal {
-    font-size: 0.8em;
-    color: #666666;
-    text-align: center;
-}
-
 .pricing-option ul {
     list-style-type: none;
 }
@@ -196,7 +182,7 @@ button > span:nth-of-type(2) {
 .pricing-option ul > li {
     display: grid;
     grid-template-columns: max-content 1fr;
-    padding-left: 7px;
+    padding-left: 10px;
     padding-right: 7px;
     margin-bottom: 17px;
 }
@@ -206,15 +192,40 @@ button > span:nth-of-type(2) {
     width: 30px;
     height: 30px;
     line-height: 30px;
-    border: 1px solid #FF69B4FF;
-    color: mediumseagreen;
+    /*border: 1px solid #FF69B4FF;
+    color: mediumseagreen;*/
     border-radius: 50%;
     text-align: center;
-    margin-right: 15px;
+    margin-right: 10px;
     position: relative;
-    top: -5px;
+    top: -2px;
     line-height: 35px;
 }
+
+button > span {
+    font-size: 1.4em;
+    display: block;
+}
+
+button > span:first-of-type {
+    /*font-family: "Racing Sans One";*/
+    color: #555555;
+    font-size: 1.4em;
+}
+
+button > span:nth-of-type(2) {
+    color: #ffffff;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+#legal {
+    font-size: 0.8em;
+    color: #666666;
+    text-align: center;
+}
+
+
 
 .image-area {
     background-repeat: no-repeat;
