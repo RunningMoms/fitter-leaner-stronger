@@ -132,8 +132,9 @@ body {
 
 #chatter{
     display: block;
-    width: 1vw;
+    width: 100vw;
     overflow: scroll;
+    text-align: center;
 }
 
 #legal {

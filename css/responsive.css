@@ -1,8 +1,5 @@
 /* large */
 @media (min-width: 1200px) {
-    .responsive-text {
-        font-size: calc(max(min(5vw, 48px), 14px));
-    }
 
     #page {
         border-right: 1px solid #dedede;
@@ -23,6 +20,7 @@
 
 /* small */
 @media (max-width: 1199px) {
+
     #pricing-options, #carey-timelaps {
         grid-template-columns: 1fr;
     }
@@ -35,10 +33,6 @@
 
     #components, #components2, #selfies {
         grid-template-columns: 1fr;
-    }
-
-    .responsive-text {
-        font-size: calc(max(min(7vw, 90px), 14px));
     }
 
     #banner li {

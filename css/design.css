@@ -30,10 +30,6 @@ body {
     height: 100vh;
 }
 
-#page > * {
-    width: 100%;
-}
-
 #page > *:nth-child(odd) {
     background-color: #000000;
     color: white;
@@ -285,6 +281,8 @@ ul.default li:last-child {
 #components2 h3{
     grid-area: title;
     border-bottom: 1px solid #dedede;
+    padding-bottom: 0.25em;
+    margin-bottom: 0.75em;
     text-align: center;
 }
 

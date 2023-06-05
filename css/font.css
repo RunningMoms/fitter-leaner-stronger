@@ -32,19 +32,7 @@
     src: url("../fonts/AvenirNextLTPro-It.otf") format('opentype');
 }
 
-h1.responsive-text,
-h2.responsive-text,
-h3.responsive-text,
-h4.responsive-text,
-h5.responsive-text,
-p.responsive-text,
-li.responsive-text,
-span.responsive-text {
 
-}
-.responsive-text-sm {
-    font-size: calc(max(min(5vw, 20px), 14px));
-}
 h1, h2, h3, h4, h5 {
     font-weight: 100;
 }
@@ -61,4 +49,33 @@ h1, h2, h3, h4, h5 {
 }
 .add-padding-sm{
     padding: 1em;
+}
+
+h1.responsive-text {
+    font-size: calc(max(min(10vw, 90px), 24px));
+}
+
+h2.responsive-text {
+    font-size: calc(max(min(8vw, 70px), 20px));
+}
+
+h3.responsive-text {
+    font-size: calc(max(min(6vw, 50px), 18px));
+}
+
+
+.responsive-text-sm {
+    font-size: calc(max(min(5vw, 20px), 14px));
+}
+
+@media (min-width: 1200px) {
+    .responsive-text {
+        font-size: calc(max(min(3vw, 24px), 14px));
+    }
+}
+
+@media (max-width: 1199px) {
+    .responsive-text {
+        font-size: calc(max(min(5vw, 36px), 14px));
+    }
 }
