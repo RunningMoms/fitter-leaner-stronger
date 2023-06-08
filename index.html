@@ -30,8 +30,10 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/scroll-snap.css">
 
-    <link rel="stylesheet" href="bundles/sweetalert2.min.css">
-    <script async defer src="bundles/sweetalert2.min.js"></script>
+
+
+    <link rel="stylesheet" href="/bundles/sweetalert2.min.css">
+    <script async defer src="/bundles/sweetalert2.min.js"></script>
 
     <!--<script>
         var TRAFFICJAM_DOMAIN = 'IO2130315041';
@@ -91,19 +93,31 @@
     <script src="//cdn.trafficjam.test/v1.js"></script>
 
     <script src="//checkout.stripe.com/checkout.js"></script>
-    <script async defer src="bundles/confetti.js"></script>
-    <script async defer src="bundles/party.min.js"></script>
+    <script async defer src="/bundles/confetti.js"></script>
+    <script async defer src="/bundles/party.min.js"></script>
 
-    <script src="custom.js"></script>
+    <script src="/custom.js"></script>
+
+    <style>
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999999;
+        }
+    </style>
 
 </head>
 <body>
-<div id="page">
+    <canvas id="confetti-canvas" style="display: none;"></canvas>
 
+<div id="page">
     <div class="standard-cols">
         <div id="banner">
             <div class="add-padding">
-                <img src="media/icons/Logo.png"/>
+                <img src="/media/icons/Logo.png"/>
             </div>
             <!--<ul style="grid-area: FLS; position: relative; top: +75px;">
                 <li><h1 class="responsive-text">Stronger</h1></li>
@@ -143,7 +157,7 @@
         </div>
 
         <div class="image-area not-mobile"
-             style="background-image: url(media/dead_lift.jpg); min-height: 300px; background-position: center center;">
+             style="background-image: url(/media/dead_lift.jpg); min-height: 300px; background-position: center center;">
         </div>
     </div>
 
@@ -186,14 +200,14 @@
 
         <div id="components">
             <div class="add-padding">
-                <img src="media/icons/curl_black.png">
+                <img src="/media/icons/curl_black.png">
                 <h3 class="responsive-text">PROGRESSIVE S&nbsp;&&nbsp;C<br/>HYBRID&nbsp;TRAINING</h3>
                 <p class="responsive-text">Effective progressive strength & conditioning hybrid training programs to
                     meet your fitness level, challenge you to push boundaries, reach new heights of strength and stoke
                     your metabolism.</p>
             </div>
             <div class="add-padding">
-                <img src="media/icons/plate_with_cutlery_black.png">
+                <img src="/media/icons/plate_with_cutlery_black.png">
                 <h3 class="responsive-text">THE MACRO&nbsp;BALANCED NUTRITION METHOD</h3>
                 <p class="responsive-text">Discover a simple, strategic & sustainable approach to nutrition that fuels
                     your body, tames inflammation, balances your hormone, optimizes fat loss, and improves your
@@ -201,7 +215,7 @@
             </div>
 
             <div class="add-padding">
-                <img src="media/icons/yoga_black.png">
+                <img src="/media/icons/yoga_black.png">
                 <h3 class="responsive-text">AN ANTI-INFLAMMATORY LIFESTYLE</h3>
                 <p class="responsive-text">By adopting habits and choices that reduce inflammation in the body you will
                     unlock a cascade of health benefits, including improved metabolic function, enhanced fat loss,
@@ -209,7 +223,7 @@
                     overall well-being.</p>
             </div>
             <div class="add-padding">
-                <img src="media/icons/fit_pose_black.png">
+                <img src="/media/icons/fit_pose_black.png">
                 <h3 class="responsive-text">THE FLS MINDSET</h3>
                 <p class="responsive-text">A powerful approach that cultivates a positive, high performance,
                     growth-oriented mindset, intentional thought work & emotional mastery designed to reprogram your
@@ -222,7 +236,7 @@
 
     <div class="standard-cols">
         <div class="image-area"
-             style="background-image: url(media/push_ups.png); min-height: 350px; background-position: center top;">
+             style="background-image: url(/media/push_ups.png); min-height: 350px; background-position: center top;">
         </div>
 
         <div>
@@ -252,10 +266,10 @@
     <div style="padding-bottom: 2em; padding-top: 2em;">
         <h2 class="responsive-text" style="text-align: center">SUCCESS STORIE</h2>
         <div id="selfies" style="padding-top: 2em; padding-bottom: 2em;">
-            <img src="media/selfies/_a.png"/>
-            <img src="media/selfies/_b.png"/>
-            <img src="media/selfies/_c.png"/>
-            <img src="media/selfies/_d.png"/>
+            <img src="/media/selfies/_a.png"/>
+            <img src="/media/selfies/_b.png"/>
+            <img src="/media/selfies/_c.png"/>
+            <img src="/media/selfies/_d.png"/>
         </div>
 
         <div id="testimonials" class="horizontal-scroll no-scroll-bar">
@@ -675,7 +689,7 @@
 
         <div id="components2">
             <div class="add-padding">
-                <img src="media/icons/weights.png">
+                <img src="/media/icons/weights.png">
                 <h3 class="responsive-text">THE FITTER LEANER STRONGER CURRICULUM</h3>
                 <p class="responsive-text">Discover a powerful step-by-step blueprint that combines a simple yet
                     effective macro balancing, strategic fasting, and anti-inflammatory nutrition approach with advanced
@@ -683,7 +697,7 @@
                     and ensure lifelong adherence, setting your body up for permanent fat loss.</p>
             </div>
             <div class="add-padding">
-                <img src="media/icons/pencil.png">
+                <img src="/media/icons/pencil.png">
                 <h3 class="responsive-text">6 WEEKS OF DAILY ACCOUNTABILITY</h3>
                 <p class="responsive-text">Join a community of ladies that can support you and encourage you. Share your
                     wins, your questions, and cheer one another along every step of the way! Participate in friendly
@@ -692,7 +706,7 @@
             </div>
 
             <div class="add-padding">
-                <img src="media/icons/plate_with_cutlery_white.png">
+                <img src="/media/icons/plate_with_cutlery_white.png">
                 <h3 class="responsive-text">FUEL FOR FAT LOSS MACRO BALANCED RECIPE GUIDES</h3>
                 <p class="responsive-text">Includes main meals, power packed snacks, high protein recipe guides and
                     access to the FLS Resources Library loaded with goodies so that you have all the simple, macro
@@ -700,7 +714,7 @@
                     for recipes on the internet.</p>
             </div>
             <div class="add-padding">
-                <img src="media/icons/dead_lift_white.png">
+                <img src="/media/icons/dead_lift_white.png">
                 <h3 class="responsive-text">6 WEEKS OF LIVE GROUP COACHING</h3>
                 <p class="responsive-text">For the expert guidance and support you are going to want throughout the 6
                     weeks, I will work directly with you to help implement strategies, answer questions, and overcome
@@ -709,13 +723,13 @@
             </div>
 
             <div class="add-padding">
-                <img src="media/icons/curl_white.png">
+                <img src="/media/icons/curl_white.png">
                 <h3 class="responsive-text">PROGRESSIVE METABOLIC&nbsp;HYBRID TRAINING&nbsp;PROGRAM</h3>
                 <p class="responsive-text">12 week strategic workout plan you need to effectively boost metabolism, burn
                     body fat and get fitter, leaner and stronger. Body weight and dumbbell programs available.</p>
             </div>
             <div class="add-padding">
-                <img src="media/icons/fit_pose_white.png">
+                <img src="/media/icons/fit_pose_white.png">
                 <h3 class="responsive-text">RESULTS&nbsp;THAT LOOK&nbsp;AND&nbsp;FEEL AMAZING</h3>
                 <p class="responsive-text">Power up your metabolism and achieve the fitter, leaner, stronger body you
                     desire from the inside out without any of the stress and deprivation of another restrictive
@@ -823,18 +837,18 @@
             </p>
 
             <div class="buttons">
-                <button onclick="party.sparkles(this); party.confetti(this); setTimeout(function(){showStripe(...Object.values(offers[0]))}, 1200)">
+                <button onclick="party.sparkles(this); party.confetti(this); try_again = offers[0]; setTimeout(function(){showStripe(...Object.values(offers[0]))}, 750)">
                     <span>$2997</span>
                     <span>Private Coaching</span>
                 </button>
 
                 <button style="background-color: #FFD700;"
-                        onclick="party.sparkles(this); party.confetti(this); setTimeout(function(){showStripe(...Object.values(offers[1]))}, 1200)">
+                        onclick="party.sparkles(this); party.confetti(this); try_again = offers[1]; setTimeout(function(){showStripe(...Object.values(offers[1]))}, 750)">
                     <span>$497</span>
                     <span>Most Popular</span>
                 </button>
 
-                <button onclick="party.sparkles(this); party.confetti(this); setTimeout(function(){showStripe(...Object.values(offers[2]))}, 1200)">
+                <button onclick="party.sparkles(this); party.confetti(this); try_again = offers[2]; setTimeout(function(){showStripe(...Object.values(offers[2]))}, 750)">
                     <span>$197</span>
                     <span>3 Payment Plan</span>
                 </button>
@@ -877,7 +891,7 @@
 
     <div class="standard-cols">
         <div class="image-area"
-             style="background-image: url(media/push_ups.png); min-height: 350px; background-position: center top;">
+             style="background-image: url(/media/push_ups.png); min-height: 350px; background-position: center top;">
         </div>
 
         <div class="add-padding">
@@ -969,10 +983,7 @@
                     border-top: 1px solid #FFCC00;
                     border-right: 2px solid #FFCC00;
                     border-bottom: 2px solid #FFCC00;
-                    border-left: 2px solid #ffffff;
-
-" href="#pricing-options">
-
+                    border-left: 2px solid #ffffff;" href="#pricing-options">
                 <h2 class="responsive-text" style="line-height: 2em; position: relative; top: +0.1em;">JOIN NOW</h2>
             </a>
 
