@@ -215,6 +215,7 @@ button > span:first-of-type {
 }
 
 button > span:nth-of-type(2) {
+    font-size: 1.5em;
     color: #363636;
 }
 
