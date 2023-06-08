@@ -209,15 +209,12 @@ button > span {
 }
 
 button > span:first-of-type {
-    /*font-family: "Racing Sans One";*/
+    padding-bottom: 0.3em;
     color: #555555;
-    font-size: 1.4em;
 }
 
 button > span:nth-of-type(2) {
-    color: #ffffff;
-    font-size: 1.6em;
-    font-weight: bold;
+    color: #000000;
 }
 
 #legal {

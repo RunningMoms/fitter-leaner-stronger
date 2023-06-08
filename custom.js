@@ -1,8 +1,9 @@
-var TRAFFICJAM_DOMAIN = 'IO2130315041';
+
+
 var focus_offer_key;
 var focus_offer_amount;
 var stripeHandler = StripeCheckout.configure({
-    key: 'pk_live_Hgrz280w9D3yOOPfipK2PaHr',
+    key: STRIPE_KEY,
     image: 'media/Stripe-128x128.png',
     locale: 'auto',
 

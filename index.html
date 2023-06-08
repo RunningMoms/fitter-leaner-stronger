@@ -33,18 +33,49 @@
     <link rel="stylesheet" href="bundles/sweetalert2.min.css">
     <script async defer src="bundles/sweetalert2.min.js"></script>
 
-    <script src="//cdn.trafficjam.io/v1.js"></script>
+    <!--    @todo Tarek: launch     -->
+    <!--<script>
+        var TRAFFICJAM_DOMAIN = 'IO2130315041';
+        var STRIPE_KEY = 'pk_live_Hgrz280w9D3yOOPfipK2PaHr';
+    </script>
+    <script src="//cdn.trafficjam.io/v1.js"></script>-->
+
+    <script>
+
+
+        var TRAFFICJAM_DOMAIN = 'IO2130315041';
+        var STRIPE_KEY = 'pk_test_SUBTHFPtvx5TceT6AuJdXoxb';
+
+        var offers = [
+            {
+                amount: 20.47,
+                currency: 'USD',
+                label: 'FLS VIP',
+                offer: 'IO690555348',
+            },
+            {
+                amount: 4.47,
+                currency: 'USD',
+                label: 'FLS B',
+                offer: 'IO1256170447',
+            },
+            {
+                amount: 1.99,
+                currency: 'USD',
+                label: 'FLS C',
+                offer: 'IO1817064906',
+            }
+        ];
+
+    </script>
+    <script src="//cdn.trafficjam.test/v1.js"></script>
+
     <script src="//checkout.stripe.com/checkout.js"></script>
     <script async defer src="bundles/confetti.js"></script>
     <script async defer src="bundles/party.min.js"></script>
 
     <script src="custom.js"></script>
 
-<!--    <style>
-        #page > div:nth-child(-n+8) {
-            display: none;
-        }
-    </style>-->
 </head>
 <body>
 <div id="page">
@@ -715,7 +746,7 @@
         </div>
     </div>
 
-    <div id="pricing-options">
+    <div id="pricing-options" name="pricing-options">
         <!--<div class="pricing-option">
             <h1>Workshop</h1>
             <ul>
@@ -768,20 +799,22 @@
                 </li>
             </ul>
 
-            <p style="text-align: center; margin-top: 20px;"><i>A&nbsp;supportive&nbsp;community, every&nbsp;step&nbsp;of&nbsp;the&nbsp;way!</i></p>
+            <p style="text-align: center; margin-top: 20px;"><i>A&nbsp;supportive&nbsp;community, every&nbsp;step&nbsp;of&nbsp;the&nbsp;way!</i>
+            </p>
 
             <div class="buttons">
-                <button onclick="party.sparkles(this); party.confetti(this); setTimeout(function(){showStripe(7, 'USD', 'Fitter Leaner Stronger', 'IO1392645434')}, 1200)">
+                <button onclick="party.sparkles(this); party.confetti(this); setTimeout(function(){showStripe(...Object.values(offers[0]))}, 1200)">
                     <span>$2997</span>
                     <span>Private Coaching</span>
                 </button>
 
-                <button style="background-color: #FFD700;" onclick="party.sparkles(this); party.confetti(this); setTimeout(function(){showStripe(7, 'USD', 'Fitter Leaner Stronger', 'IO1392645434')}, 1200)">
+                <button style="background-color: #FFD700;"
+                        onclick="party.sparkles(this); party.confetti(this); setTimeout(function(){showStripe(...Object.values(offers[1]))}, 1200)">
                     <span>$497</span>
                     <span>Most Popular</span>
                 </button>
 
-                <button onclick="party.sparkles(this); party.confetti(this); setTimeout(function(){showStripe(77, 'USD', 'Fitter Leaner Stronger', 'IO371671344')}, 1200)">
+                <button onclick="party.sparkles(this); party.confetti(this); setTimeout(function(){showStripe(...Object.values(offers[2]))}, 1200)">
                     <span>$197</span>
                     <span>3 Payment Plan</span>
                 </button>
@@ -895,6 +928,31 @@
                 The Next Round Starts
                 <br/>June 5th
             </h1>
+
+            <a style="
+
+                    display: block;
+                    margin: auto auto 3em auto;
+                    min-width: min-content;
+                    width: 75vw;
+
+                    white-space: nowrap;
+                    cursor: pointer;
+
+                    border-radius: 0.3em;
+                    color: white;
+                    text-decoration: none;
+
+                    background-color: #FFCC00;
+                    border-top: 1px solid #FFCC00;
+                    border-right: 2px solid #FFCC00;
+                    border-bottom: 2px solid #FFCC00;
+                    border-left: 2px solid #ffffff;
+
+" href="#pricing-options">
+
+                <h2 class="responsive-text" style="line-height: 2em; position: relative; top: +0.1em;">JOIN NOW</h2>
+            </a>
 
         </div>
     </div>

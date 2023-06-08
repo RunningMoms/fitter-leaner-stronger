@@ -94,6 +94,7 @@ body {
 
 #pricing-options button{
     min-height: fit-content;
+    padding: 1.2em;
 }
 
 .pricing-option {
