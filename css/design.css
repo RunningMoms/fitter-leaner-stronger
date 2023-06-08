@@ -133,11 +133,11 @@ body {
 }
 
 .pricing-option h2 {
-    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 1.2em;
     text-align: center;
     color: #DAA520FF;
-    font-size: 1.2em;
-    margin-bottom: 10px;
 }
 
 .pricing-option p {
@@ -153,7 +153,7 @@ body {
 
 .pricing-option button {
     cursor: pointer;
-    height: 60px;
+    min-height: 60px;
     background-color: #FFCC00;
     border-top: 1px solid #FFCC00;
     border-right: 2px solid #FFCC00;
@@ -164,7 +164,6 @@ body {
 }
 
 .pricing-option button:first-child{
-    background-color: #FFD700;
     border-left: 2px solid #FFD700;
     border-bottom: 2px solid #FFD700;
 }
@@ -186,7 +185,7 @@ body {
     grid-template-columns: max-content 1fr;
     padding-left: 10px;
     padding-right: 7px;
-    margin-bottom: 17px;
+    padding-bottom: 17px;
 }
 
 .pricing-option ul > li > span {
@@ -198,7 +197,7 @@ body {
     color: mediumseagreen;*/
     border-radius: 50%;
     text-align: center;
-    margin-right: 10px;
+    padding-right: 10px;
     position: relative;
     top: -2px;
     line-height: 35px;
@@ -250,7 +249,7 @@ ul.default {
 }
 
 ul.default li {
-    margin-bottom: 0.65em;
+    padding-bottom: 0.65em;
 }
 
 ul.default li:last-child {

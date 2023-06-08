@@ -87,14 +87,18 @@ body {
     padding-top: 2em;
     padding-bottom: 2em;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, max-content));
+    grid-template-columns: repeat(auto-fit, minmax(500px, max-content));
     justify-content: center;
     gap: 2em;
 }
 
+#pricing-options button{
+    min-height: fit-content;
+}
+
 .pricing-option {
-    min-width: 320px;
-    max-width: 25vw;
+    min-width: fit-content;
+    width: 40vw;
 
     display: grid;
     grid-auto-flow: row;

@@ -26,9 +26,9 @@
     }
 
     .pricing-option{
-        min-width: 320px;
+
         width: 75vw;
-        max-width: 75vw;
+        max-width: 1fr;
     }
 
     #components, #components2, #selfies {
