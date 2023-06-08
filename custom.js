@@ -24,7 +24,7 @@ function showStripe(amount, currency, description, offer_key) {
     amount *= 100;
     focus_offer_key = offer_key;
     stripeHandler.open({
-        name: 'RunningMoms',
+        name: STRIPE_TITLE,
         amount,
         currency,
         description,

@@ -33,41 +33,61 @@
     <link rel="stylesheet" href="bundles/sweetalert2.min.css">
     <script async defer src="bundles/sweetalert2.min.js"></script>
 
-    <!--    @todo Tarek: launch     -->
     <!--<script>
         var TRAFFICJAM_DOMAIN = 'IO2130315041';
         var STRIPE_KEY = 'pk_live_Hgrz280w9D3yOOPfipK2PaHr';
-    </script>
-    <script src="//cdn.trafficjam.io/v1.js"></script>-->
-
-    <script>
-
-
-        var TRAFFICJAM_DOMAIN = 'IO2130315041';
-        var STRIPE_KEY = 'pk_test_SUBTHFPtvx5TceT6AuJdXoxb';
+        var STRIPE_TITLE = 'Fitter Leaner Stronger';
 
         var offers = [
             {
                 amount: 20.47,
                 currency: 'USD',
-                label: 'FLS VIP',
-                offer: 'IO690555348',
+                label: 'Private Coaching',
+                offer: '',
             },
             {
                 amount: 4.47,
                 currency: 'USD',
                 label: 'FLS B',
-                offer: 'IO1256170447',
+                offer: '',
             },
             {
                 amount: 1.99,
                 currency: 'USD',
                 label: 'FLS C',
+                offer: '',
+            }
+        ];
+    </script>
+    -->
+
+    <script>
+        var TRAFFICJAM_DOMAIN = 'IO2130315041';
+        var STRIPE_KEY = 'pk_test_SUBTHFPtvx5TceT6AuJdXoxb';
+        var STRIPE_TITLE = 'FLS - DEVMODE';
+
+        var offers = [
+            {
+                amount: 20.47,
+                currency: 'USD',
+                label: 'Private Coaching',
+                offer: 'IO690555348',
+            },
+            {
+                amount: 4.47,
+                currency: 'USD',
+                label: 'Most Popular',
+                offer: 'IO1256170447',
+            },
+            {
+                amount: 1.99,
+                currency: 'USD',
+                label: 'Payments Plan',
                 offer: 'IO1817064906',
             }
         ];
-
     </script>
+
     <script src="//cdn.trafficjam.test/v1.js"></script>
 
     <script src="//checkout.stripe.com/checkout.js"></script>
@@ -930,13 +950,15 @@
             </h1>
 
             <a style="
-
                     display: block;
-                    margin: auto auto 3em auto;
-                    min-width: min-content;
-                    width: 75vw;
-
                     white-space: nowrap;
+                    margin: auto auto 3em auto;
+
+                    min-width: min-content;
+                    width: calc(100% - 50px);
+                    padding-left: 1em;
+                    padding-right: 1em;
+
                     cursor: pointer;
 
                     border-radius: 0.3em;

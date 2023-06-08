@@ -154,10 +154,11 @@ body {
 .pricing-option button {
     cursor: pointer;
     min-height: 60px;
-    background-color: #FFCC00;
-    border-top: 1px solid #FFCC00;
-    border-right: 2px solid #FFCC00;
-    border-bottom: 2px solid #FFCC00;
+
+    background-color: #f7e633; /* #f7e633 is another great option that stripe itself uses. */
+    border-top: 1px solid #f7e633;
+    border-right: 2px solid #f7e633;
+    border-bottom: 2px solid #f7e633;
     border-left: 2px solid #ffffff;
 
     text-align: center;
