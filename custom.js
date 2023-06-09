@@ -92,22 +92,20 @@ function trafficJamEventHandler(message) {
     }
 }
 
-// @TODO TAREK: less code
-//document.addEventListener("DOMContentLoaded", function () {
 bindEvent(window, "message", trafficJamEventHandler);
+document.addEventListener("DOMContentLoaded", function () {
 
-//});
+    function deferImgs() {
+        Array
+            .from(document.querySelectorAll("img[data-src-defer]"))
+            .forEach((element) => {
+                element.setAttribute("src", element.dataset.srcDefer);
+            });
+    }
 
-function deferImgs() {
-    Array
-        .from(document.querySelectorAll("img[data-src-defer]"))
-        .forEach((element) => {
-            element.setAttribute("src", element.dataset.srcDefer);
-        });
-}
+    window.addEventListener("load", deferImgs());
 
-window.addEventListener("load", deferImgs());
-
+});
 
 function queConfetti() {
     var canvas = document.getElementById('confetti-canvas');
