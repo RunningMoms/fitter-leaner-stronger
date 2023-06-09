@@ -106,7 +106,7 @@ function deferImgs() {
         });
 }
 
-window.addEventListener("load", deferImgs);
+window.addEventListener("load", deferImgs());
 
 
 function queConfetti() {
