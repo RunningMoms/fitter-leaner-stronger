@@ -114,7 +114,7 @@ body {
 }
 
 .pricing-option {
-    border-radius: var(--radius);
+    /*border-radius: var(--radius);*/
     background-color: #000000;
     color: white;
 
@@ -171,11 +171,11 @@ body {
 }
 
 .pricing-option button:first-child {
-    border-bottom-left-radius: var(--radius);
+    /*border-bottom-left-radius: var(--radius);*/
 }
 
 .pricing-option button:last-child {
-    border-bottom-right-radius: var(--radius);
+    /*border-bottom-right-radius: var(--radius);*/
 }
 
 .pricing-option ul {
