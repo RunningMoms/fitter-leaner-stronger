@@ -118,7 +118,8 @@ body {
     background-color: #000000;
     color: white;
 
-    min-width: min-content;
+    min-width: fit-content;
+    width: 40vw;
 }
 
 .pricing-option ul {

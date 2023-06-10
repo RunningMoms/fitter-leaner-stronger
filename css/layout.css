@@ -98,9 +98,6 @@ body {
 }
 
 .pricing-option {
-    min-width: fit-content;
-    width: 40vw;
-
     display: grid;
     grid-auto-flow: row;
     grid-template-rows:
