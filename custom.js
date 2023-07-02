@@ -87,8 +87,6 @@ function trafficJamEventHandler(message) {
             icon: 'success',
             confirmButtonText: 'Close'
         });
-
-        console.log(el);
     }
 }
 
