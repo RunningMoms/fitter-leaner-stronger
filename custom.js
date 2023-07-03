@@ -62,7 +62,7 @@ function trafficJamEventHandler(message) {
                     allowOutsideClick: false,
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        showStripe(try_again);
+                        showStripe(...Object.values(try_again));
                         window.try_again = undefined;
                     } else {
                         window.location.href = 'mailto:carey@runningmoms.com';
