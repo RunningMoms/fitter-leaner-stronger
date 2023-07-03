@@ -55,7 +55,7 @@ function trafficJamEventHandler(message) {
             for (const errorField in message.errors) {
                 const errorMessages = message.errors[errorField];
                 errorMessages.forEach(errorMessage => {
-                    formattedErrors += `<li style="text-align: left;"><span style="color:#990000;">${errorField}:</span> ${errorMessage}</li>`;
+                    formattedErrors += `<li style="text-align: left;"><span style="color:#dd3333;">${errorField}:</span> ${errorMessage}</li>`;
                 });
             }
             formattedErrors += '</ul>';
@@ -70,6 +70,10 @@ function trafficJamEventHandler(message) {
                     showCancelButton: true,
                     cancelButtonText: 'Contact Carey',
                     allowOutsideClick: false,
+
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#999999',
+
                 }).then((result) => {
                     if (result.isConfirmed) {
                         showStripe(...Object.values(try_again));
@@ -85,6 +89,7 @@ function trafficJamEventHandler(message) {
                     icon: 'error',
                     confirmButtonText: 'Contact Carey',
                     allowOutsideClick: false,
+                    confirmButtonColor: '#3085d6',
                 }).then((result) => {
                     window.location.href = 'mailto:carey@runningmoms.com';
                     Swal.close();
