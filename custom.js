@@ -47,7 +47,7 @@ function trafficJamEventHandler(message) {
         return;
     }
 
-    if (message.http_status != 200) {
+    if (message.http_status != 200 && message.event == "purchaseResponse") {
 
         if (try_again != undefined) {
 
@@ -79,7 +79,7 @@ function trafficJamEventHandler(message) {
                 Swal.close();
             });
         }
-    } else {
+    } else if(message.event == "purchaseResponse"){
         queConfetti();
         let el = Swal.fire({
             title: 'Success!',
