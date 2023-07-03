@@ -50,17 +50,17 @@ function trafficJamEventHandler(message) {
     if (message.event == "purchaseResponse") {
         if (message.http_status != 200) {
 
-            if (try_again != undefined) {
+            // Reformat the errors into HTML
+            let formattedErrors = `<h2>${message.message}</h2><ul>`;
+            for (const errorField in message.errors) {
+                const errorMessages = message.errors[errorField];
+                errorMessages.forEach(errorMessage => {
+                    formattedErrors += `<li style="text-align: left;"><span style="color:#990000;">${errorField}:</span> ${errorMessage}</li>`;
+                });
+            }
+            formattedErrors += '</ul>';
 
-                // Reformat the errors into HTML
-                let formattedErrors = `<h2>${message.message}</h2><ul>`;
-                for (const errorField in message.errors) {
-                    const errorMessages = message.errors[errorField];
-                    errorMessages.forEach(errorMessage => {
-                        formattedErrors += `<li style="text-align: left;"><span style="color:#990000;">${errorField}:</span> ${errorMessage}</li>`;
-                    });
-                }
-                formattedErrors += '</ul>';
+            if (try_again != undefined) {
 
                 Swal.fire({
                     title: 'No worries. Try one more time,<br/>then just contact me.',
@@ -81,7 +81,7 @@ function trafficJamEventHandler(message) {
             } else {
                 Swal.fire({
                     title: 'No worries. Just contact me.<br/>I\'ll get you setup!',
-                    text: message.message,
+                    html: formattedErrors,
                     icon: 'error',
                     confirmButtonText: 'Contact Carey',
                     allowOutsideClick: false,
