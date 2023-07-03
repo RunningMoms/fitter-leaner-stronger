@@ -47,46 +47,48 @@ function trafficJamEventHandler(message) {
         return;
     }
 
-    if (message.http_status != 200 && message.event == "purchaseResponse") {
+    if (message.event == "purchaseResponse") {
+        if (message.http_status != 200) {
 
-        if (try_again != undefined) {
+            if (try_again != undefined) {
 
-            Swal.fire({
-                title: 'No worries. Try one more time,<br/>then just contact me.',
-                text: message.message,
-                icon: 'error',
-                confirmButtonText: 'Try Again',
-                showCancelButton: true,
-                cancelButtonText: 'Contact Carey',
-                allowOutsideClick: false,
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    showStripe(try_again);
-                    window.try_again = undefined;
-                } else {
+                Swal.fire({
+                    title: 'No worries. Try one more time,<br/>then just contact me.',
+                    text: message.message,
+                    icon: 'error',
+                    confirmButtonText: 'Try Again',
+                    showCancelButton: true,
+                    cancelButtonText: 'Contact Carey',
+                    allowOutsideClick: false,
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        showStripe(try_again);
+                        window.try_again = undefined;
+                    } else {
+                        window.location.href = 'mailto:carey@runningmoms.com';
+                    }
+                });
+            } else {
+                Swal.fire({
+                    title: 'No worries. Just contact me.<br/>I\'ll get you setup!',
+                    text: message.message,
+                    icon: 'error',
+                    confirmButtonText: 'Contact Carey',
+                    allowOutsideClick: false,
+                }).then((result) => {
                     window.location.href = 'mailto:carey@runningmoms.com';
-                }
-            });
+                    Swal.close();
+                });
+            }
         } else {
-            Swal.fire({
-                title: 'No worries. Just contact me.<br/>I\'ll get you setup!',
-                text: message.message,
-                icon: 'error',
-                confirmButtonText: 'Contact Carey',
-                allowOutsideClick: false,
-            }).then((result) => {
-                window.location.href = 'mailto:carey@runningmoms.com';
-                Swal.close();
+            queConfetti();
+            let el = Swal.fire({
+                title: 'Success!',
+                text: 'Please check your email for further details.',
+                icon: 'success',
+                confirmButtonText: 'Close'
             });
         }
-    } else if(message.event == "purchaseResponse"){
-        queConfetti();
-        let el = Swal.fire({
-            title: 'Success!',
-            text: 'Please check your email for further details.',
-            icon: 'success',
-            confirmButtonText: 'Close'
-        });
     }
 }
 
