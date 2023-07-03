@@ -101,7 +101,8 @@ function trafficJamEventHandler(message) {
                 title: 'Success!',
                 text: 'Please check your email for further details.',
                 icon: 'success',
-                confirmButtonText: 'Close'
+                confirmButtonText: 'Close',
+                confirmButtonColor: '#3085d6',
             });
         }
     }
