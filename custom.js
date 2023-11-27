@@ -21,12 +21,13 @@ var stripeHandler = StripeCheckout.configure({
 });
 
 function showStripe(amount, currency, description, offer_key) {
-    fb_tracking_amount = amount;
+    fb_tracking_amount = parseInt(amount);
     fbq('track', 'InitiateCheckout', {currency: "USD", value: fb_tracking_amount});
 
     focus_offer_amount = parseInt(amount) / 100;
     amount *= 100;
     focus_offer_key = offer_key;
+
 
     stripeHandler.open({
         name: STRIPE_TITLE,
