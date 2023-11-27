@@ -1,6 +1,7 @@
 var focus_offer_key;
 var focus_offer_amount;
 var try_again;
+var fb_tracking_amount = 0;
 
 var stripeHandler = StripeCheckout.configure({
     key: STRIPE_KEY,
@@ -33,6 +34,9 @@ function showStripe(amount, currency, description, offer_key) {
         shippingAddress: false,
         allowRememberMe: false,
     });
+
+    fb_tracking_amount = amount;
+    fbq('track', 'InitiateCheckout', {currency: "USD", value: fb_tracking_amount});
 }
 
 
@@ -104,6 +108,11 @@ function trafficJamEventHandler(message) {
                 confirmButtonText: 'Close',
                 confirmButtonColor: '#3085d6',
             });
+
+            if (fb_tracking_amount > 0) {
+                fbq('track', 'Purchase', {currency: "USD", value: fb_tracking_amount});
+                fb_tracking_amount = 0;
+            }
         }
     }
 }
@@ -118,8 +127,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 element.setAttribute("src", element.dataset.srcDefer);
             });
     }
-
     window.addEventListener("load", deferImgs());
+
+    // Create an intersection observer
+    let observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            // Check if the target div is in view
+            if (entry.isIntersecting) {
+                // Fire the Facebook tracking
+                for(var i = 0; i < offers.length; i++) {
+                    fbq('track', 'ViewContent', {content_category: "pricing option", value: offers[i].amount, currency: "USD"});
+                }
+
+                // Optional: Unobserve after firing once
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 }); // Adjust threshold as needed
+
+// Target the element to observe
+    let target = document.getElementById('pricing-options');
+    observer.observe(target);
 
 });
 
@@ -162,5 +190,3 @@ function cleanupConfetti() {
         canvas.style.opacity = 1;
     }, 50 * 20); // Adjust the delay here (50ms * 20 = 1000ms = 1 second)
 }
-
-
