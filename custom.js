@@ -137,11 +137,10 @@ document.addEventListener("DOMContentLoaded", function () {
             // Check if the target div is in view
             if (entry.isIntersecting) {
                 // Fire the Facebook tracking
-                for(var i = 0; i < offers.length; i++) {
-                    fbq('track', 'ViewContent', {content_category: "pricing option", value: offers[i].amount, currency: "USD"});
-                }
-
-                // Optional: Unobserve after firing once
+                // for(var i = 0; i < offers.length; i++) {
+                //     fbq('track', 'ViewContent', {content_category: "pricing option", value: offers[i].amount, currency: "USD"});
+                // }
+                fbq('track', 'ViewContent', {content_category: "pricing options"});
                 observer.unobserve(entry.target);
             }
         });
